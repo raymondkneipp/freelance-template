@@ -6,7 +6,7 @@ const Layout: NextPage = ({ children }) => {
     <>
       <Banner>
         <Typography variant="p" color="light">
-          Big News! We're offering 30% off all services.
+          Big News! We&apos;re offering 30% off all services.
         </Typography>
         <Button secondary to="/services" sm>
           Learn More

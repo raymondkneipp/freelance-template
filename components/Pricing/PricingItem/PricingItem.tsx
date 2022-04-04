@@ -32,8 +32,10 @@ const PricingItem: NextPage<Props> = ({ name, description, price, perks }) => {
       <Button to="/">Buy {name}</Button>
 
       <DescriptionList header="WHAT'S INCLUDED">
-        {perks.map((perk) => (
-          <DescriptionListItem icon={FaCheck}>{perk}</DescriptionListItem>
+        {perks.map((perk, i) => (
+          <DescriptionListItem key={perk + i} icon={FaCheck}>
+            {perk}
+          </DescriptionListItem>
         ))}
       </DescriptionList>
     </div>

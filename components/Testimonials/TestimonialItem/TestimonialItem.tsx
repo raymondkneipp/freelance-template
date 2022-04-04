@@ -34,7 +34,7 @@ const TestimonialItem: NextPage<Props> = ({ quote, name, image, stars }) => {
       </div>
       <div className={styles.testimonialItem__quote}>
         <Typography variant="p" element="blockquote">
-          "{quote}"
+          &quot;{quote}&quot;
         </Typography>
       </div>
     </figure>

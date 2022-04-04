@@ -131,6 +131,7 @@ const PrivacyPolicyPage: NextPage = () => {
                         href="http://www.example.com"
                         rel="external nofollow noopener"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         http://www.example.com
                       </a>
@@ -182,7 +183,7 @@ const PrivacyPolicyPage: NextPage = () => {
                   Usage Data is collected automatically when using the Service.
                 </Typography>
                 <Typography variant="p">
-                  Usage Data may include information such as Your Device's
+                  Usage Data may include information such as Your Device&apso;s
                   Internet Protocol address (e.g. IP address), browser type,
                   browser version, the pages of our Service that You visit, the
                   time and date of Your visit, the time spent on those pages,
@@ -233,7 +234,7 @@ const PrivacyPolicyPage: NextPage = () => {
                     at{' '}
                     <a
                       href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
-                      rel="external nofollow noopener"
+                      rel="external nofollow noopener noreferrer"
                       target="_blank"
                       className="break-all"
                     >
@@ -260,6 +261,7 @@ const PrivacyPolicyPage: NextPage = () => {
                   <a
                     href="https://www.termsfeed.com/privacy-policy-generator/#faq-8"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Cookies by TermsFeed Generator
                   </a>
@@ -357,11 +359,12 @@ const PrivacyPolicyPage: NextPage = () => {
                     <Typography variant="p">
                       <strong>To contact You:</strong> To contact You by email,
                       telephone calls, SMS, or other equivalent forms of
-                      electronic communication, such as a mobile application's
-                      push notifications regarding updates or informative
-                      communications related to the functionalities, products or
-                      contracted services, including the security updates, when
-                      necessary or reasonable for their implementation.
+                      electronic communication, such as a mobile
+                      application&apos;s push notifications regarding updates or
+                      informative communications related to the functionalities,
+                      products or contracted services, including the security
+                      updates, when necessary or reasonable for their
+                      implementation.
                     </Typography>
                   </ListItem>
                   <ListItem>
@@ -468,12 +471,12 @@ const PrivacyPolicyPage: NextPage = () => {
                 </Typography>
                 <Typography variant="p">
                   Your information, including Personal Data, is processed at the
-                  Company's operating offices and in any other places where the
-                  parties involved in the processing are located. It means that
-                  this information may be transferred to — and maintained on —
-                  computers located outside of Your state, province, country or
-                  other governmental jurisdiction where the data protection laws
-                  may differ than those from Your jurisdiction.
+                  Company&apos;s operating offices and in any other places where
+                  the parties involved in the processing are located. It means
+                  that this information may be transferred to — and maintained
+                  on — computers located outside of Your state, province,
+                  country or other governmental jurisdiction where the data
+                  protection laws may differ than those from Your jurisdiction.
                 </Typography>
                 <Typography variant="p">
                   Your consent to this Privacy Policy followed by Your
@@ -536,7 +539,7 @@ const PrivacyPolicyPage: NextPage = () => {
                   Data, We cannot guarantee its absolute security.
                 </Typography>
                 <Typography variant="h2" color="primary">
-                  Children's Privacy
+                  Children&apos;s Privacy
                 </Typography>
                 <Typography variant="p">
                   Our Service does not address anyone under the age of 13. We do
@@ -551,8 +554,8 @@ const PrivacyPolicyPage: NextPage = () => {
                 <Typography variant="p">
                   If We need to rely on consent as a legal basis for processing
                   Your information and Your country requires consent from a
-                  parent, We may require Your parent's consent before We collect
-                  and use that information.
+                  parent, We may require Your parent&apos;s consent before We
+                  collect and use that information.
                 </Typography>
                 <Typography variant="h2" color="primary">
                   Links to Other Websites
@@ -560,8 +563,9 @@ const PrivacyPolicyPage: NextPage = () => {
                 <Typography variant="p">
                   Our Service may contain links to other websites that are not
                   operated by Us. If You click on a third party link, You will
-                  be directed to that third party's site. We strongly advise You
-                  to review the Privacy Policy of every site You visit.
+                  be directed to that third party&apos;s site. We strongly
+                  advise You to review the Privacy Policy of every site You
+                  visit.
                 </Typography>
                 <Typography variant="p">
                   We have no control over and assume no responsibility for the
@@ -601,6 +605,7 @@ const PrivacyPolicyPage: NextPage = () => {
                       href="http://www.example.com/privacy-policy"
                       rel="external nofollow noopener"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       http://www.example.com/privacy-policy
                     </a>

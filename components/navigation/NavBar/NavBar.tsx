@@ -15,7 +15,13 @@ const NavBar: NextPage = () => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <a className="flex items-center space-x-2 rounded-xl">
-              <Image src="/logo.svg" width="45" height="45" layout="fixed" />
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width="45"
+                height="45"
+                layout="fixed"
+              />
               <Typography variant="h4" color="primary" element="span">
                 Brand
               </Typography>

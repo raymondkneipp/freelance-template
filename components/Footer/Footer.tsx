@@ -24,7 +24,13 @@ const Footer: NextPage = () => {
         <Tall
           master={
             <>
-              <Image src="/logo.svg" width={45} height={45} layout="fixed" />
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={45}
+                height={45}
+                layout="fixed"
+              />
               <Typography variant="p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
                 optio? Odio repudiandae ipsa ipsam non id iusto, incidunt ullam
