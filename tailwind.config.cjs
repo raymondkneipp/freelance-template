@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
-        heading: ['var(--font-syne)', ...fontFamily.serif],
+        heading: ['var(--font-syne)', ...fontFamily.sans],
       },
     },
   },
