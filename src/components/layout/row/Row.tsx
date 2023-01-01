@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 
-const col = cva('flex flex-col items-start', {
+const row = cva('flex flex-row items-start', {
   variants: {
     gap: {
       sm: 'gap-2',
@@ -13,12 +13,12 @@ const col = cva('flex flex-col items-start', {
   },
 })
 
-export interface ColProps
+export interface RowProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof col> {
+    VariantProps<typeof row> {
   children: React.ReactNode
 }
 
-export const Col: React.FC<ColProps> = ({ gap, children, className }) => {
-  return <div className={col({ gap, className })}>{children}</div>
+export const Row: React.FC<RowProps> = ({ gap, children, className }) => {
+  return <div className={row({ gap, className })}>{children}</div>
 }

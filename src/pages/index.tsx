@@ -1,4 +1,4 @@
-import { Container, Text, Button, Col } from '$components'
+import { Container, Text, Button, Col, Row } from '$components'
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
 import { FaBell } from 'react-icons/fa'
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           cillum sint consectetur cupidatat.
         </Text>
 
-        <Col gap='lg'>
+        <Row gap='lg'>
           <Col>
             <Text variant='h2'>Primary</Text>
             <Button fullWidth>Button</Button>
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
               Button
             </Button>
           </Col>
-        </Col>
+        </Row>
       </Container>
     </>
   )
