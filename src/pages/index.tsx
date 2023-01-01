@@ -1,4 +1,13 @@
-import { Container, Text, Button, Col, Row, Anchor } from '$components'
+import {
+  Container,
+  Text,
+  Button,
+  Col,
+  Row,
+  Anchor,
+  Full,
+  Card,
+} from '$components'
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
 import { FaBell } from 'react-icons/fa'
@@ -9,8 +18,73 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Full className='bg-red-200'>
+        <Col align='center'>
+          <Text variant='h1' align='center'>
+            A Great Tagline Goes Here!
+          </Text>
+          <Text align='center'>
+            Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+            reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
+            ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
+          </Text>
+        </Col>
+      </Full>
       <Container>
         <Col gap='lg'>
+          <Row>
+            {[...Array(5)].map((_, i) => (
+              <Card key={i}>
+                <Col gap='sm'>
+                  <Text variant='h3'>Lorem ipsum dolor sit amet</Text>
+                  <Text>
+                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+                    reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+                    mollit ex esse exercitation amet. Nisi anim cupidatat
+                    luptate laboris sint cupidatat ullamco ut ea consectetur et
+                    est culpa et culpa duis.
+                  </Text>
+                    <Button fullWidth>Click Me</Button>
+                </Col>
+              </Card>
+            ))}
+          </Row>
+              <Card size="sm">
+                <Col gap='sm'>
+                  <Text variant='h3'>Lorem ipsum dolor sit amet</Text>
+                  <Text>
+                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+                    reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+                    mollit ex esse exercitation amet. Nisi anim cupidatat
+                    luptate laboris sint
+                  </Text>
+                    <Button size="sm">Click Me</Button>
+                </Col>
+              </Card>
+              <Card size="md">
+                <Col gap='sm'>
+                  <Text variant='h3'>Lorem ipsum dolor sit amet</Text>
+                  <Text>
+                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+                    reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+                    mollit ex esse exercitation amet. Nisi anim cupidatat
+                    luptate laboris sint
+                  </Text>
+                    <Button size="sm">Click Me</Button>
+                </Col>
+              </Card>
+              <Card size="lg">
+                <Col gap='md'>
+                  <Text variant='h3'>Lorem ipsum dolor sit amet</Text>
+                  <Text>
+                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+                    reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+                    mollit ex esse exercitation amet. Nisi anim cupidatat
+                    luptate laboris sint
+                  </Text>
+                    <Button size="lg">Click Me</Button>
+                </Col>
+              </Card>
           <Col>
             <Text variant='h1'>Hello</Text>
             <Text variant='h2'>Hello</Text>
@@ -108,16 +182,13 @@ const Home: NextPage = () => {
             <Anchor href='/' intent='primary'>
               Anchor
             </Anchor>
-            <Anchor href='/' intent='secondary'>
-              Anchor
-            </Anchor>
-            <Anchor href='/' intent='secondary' newTab>
+            <Anchor href='/' newTab>
               New Tab
             </Anchor>
             <Text>
               Lorem ipsum <Anchor intent='primary'>dolor sit amet</Anchor>, qui
               minim labore adipisicing minim sint cillum{' '}
-              <Anchor intent='secondary'>sint consectetur</Anchor> cupidatat.
+              <Anchor intent='default'>sint consectetur</Anchor> cupidatat.
             </Text>
           </Col>
         </Col>

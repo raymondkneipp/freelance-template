@@ -2,7 +2,7 @@ import { type AppType } from 'next/app'
 import { trpc } from '../utils/trpc'
 import '../styles/globals.css'
 import { Inter, Syne } from '@next/font/google'
-import { NavBar, Col, Footer } from '$components'
+import { NavBar, Footer } from '$components'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const syne = Syne({
@@ -13,16 +13,15 @@ const syne = Syne({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <Col
+    <div
       className={`${inter.variable} ${syne.variable} font-sans`}
-      align='stretch'
     >
       <NavBar />
       <main>
         <Component {...pageProps} />
       </main>
       <Footer />
-    </Col>
+    </div>
   )
 }
 

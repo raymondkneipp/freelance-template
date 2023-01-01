@@ -8,7 +8,7 @@ export const NavBar: React.FC = () => {
   return (
     <nav className='border-b py-8'>
       <Container>
-        <Row align="center" justify="between">
+        <Row align="center" justify="between" gap="lg">
           <Row align='center'>
             <Logo />
             <Text variant='h5' element='span'>

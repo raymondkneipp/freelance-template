@@ -13,9 +13,16 @@ const text = cva('text-base', {
       p: 'font-sans',
       span: 'font-sans',
     },
+    align: {
+      start: 'text-start',
+      center: 'text-center',
+      end: 'text-end',
+      justify: 'text-justify',
+    }
   },
   defaultVariants: {
     variant: 'p',
+    align: 'start'
   },
 })
 
@@ -31,12 +38,13 @@ export const Text: React.FC<TextProps> = ({
   className,
   variant = 'p',
   children,
+  align,
   element = variant,
   ...props
 }) => {
   return React.createElement(
     element || 'p',
-    { className: text({ className, variant }), ...props },
+    { className: text({ className, variant, align }), ...props },
     children
   )
 }

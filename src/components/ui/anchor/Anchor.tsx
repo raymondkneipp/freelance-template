@@ -5,8 +5,6 @@ const anchor = cva('underline underline-offset-2 transition', {
   variants: {
     intent: {
       primary: 'text-blue-600 decoration-blue-200 hover:decoration-blue-600',
-      secondary:
-        'text-violet-600 decoration-violet-200 hover:decoration-violet-600',
       default: 'text-inherit decoration-neutral-200 hover:decoration-black',
     },
   },

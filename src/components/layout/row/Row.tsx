@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 
-const row = cva('flex flex-row items-start', {
+const row = cva('flex flex-row items-start flex-wrap', {
   variants: {
     gap: {
       sm: 'gap-2',
