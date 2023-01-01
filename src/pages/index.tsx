@@ -1,4 +1,4 @@
-import { Container, Text, Button, Col, Row } from '$components'
+import { Container, Text, Button, Col, Row, Anchor } from '$components'
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
 import { FaBell } from 'react-icons/fa'
@@ -10,20 +10,23 @@ const Home: NextPage = () => {
   return (
     <>
       <Container>
-        <Text variant='h1'>Hello</Text>
-        <Text variant='h2'>Hello</Text>
-        <Text variant='h3'>Hello</Text>
-        <Text variant='h4'>Hello</Text>
-        <Text variant='h5'>Hello</Text>
-        <Text variant='h6'>Hello</Text>
-        <Text variant='p'>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
-        </Text>
+        <Col gap="lg">
+        <Col>
+          <Text variant='h1'>Hello</Text>
+          <Text variant='h2'>Hello</Text>
+          <Text variant='h3'>Hello</Text>
+          <Text variant='h4'>Hello</Text>
+          <Text variant='h5'>Hello</Text>
+          <Text variant='h6'>Hello</Text>
+          <Text variant='p'>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </Text>
+          <Text>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </Text>
+        </Col>
 
         <Row gap='lg'>
           <Col>
@@ -98,6 +101,18 @@ const Home: NextPage = () => {
             </Button>
           </Col>
         </Row>
+
+        <Col>
+          <Text variant='h2'>Anchors</Text>
+          <Anchor href='/'>Anchor</Anchor>
+          <Anchor href='/' intent='primary'>
+            Anchor
+          </Anchor>
+          <Anchor href='/' intent='secondary'>
+            Anchor
+          </Anchor>
+        </Col>
+        </Col>
       </Container>
     </>
   )
