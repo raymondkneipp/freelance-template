@@ -115,8 +115,9 @@ const Home: NextPage = () => {
               New Tab
             </Anchor>
             <Text>
-              Lorem ipsum <Anchor intent="primary">dolor sit amet</Anchor>, qui minim labore adipisicing minim
-              sint cillum <Anchor intent="secondary">sint consectetur</Anchor> cupidatat.
+              Lorem ipsum <Anchor intent='primary'>dolor sit amet</Anchor>, qui
+              minim labore adipisicing minim sint cillum{' '}
+              <Anchor intent='secondary'>sint consectetur</Anchor> cupidatat.
             </Text>
           </Col>
         </Col>
