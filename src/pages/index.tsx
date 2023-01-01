@@ -1,4 +1,4 @@
-import { Container, Text, Button, Col, Row } from '$components'
+import { Container, Text, Button, Col, Row, NavBar } from '$components'
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
 import { FaBell } from 'react-icons/fa'
@@ -9,6 +9,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <NavBar />
       <Container>
         <Text variant='h1'>Hello</Text>
         <Text variant='h2'>Hello</Text>
