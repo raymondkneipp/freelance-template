@@ -1,4 +1,4 @@
-import { Container, Text, Button, Col, Row, NavBar } from '$components'
+import { Container, Text, Button, Col, Row } from '$components'
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
 import { FaBell } from 'react-icons/fa'
@@ -9,7 +9,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <NavBar />
       <Container>
         <Text variant='h1'>Hello</Text>
         <Text variant='h2'>Hello</Text>
@@ -29,17 +28,14 @@ const Home: NextPage = () => {
         <Row gap='lg'>
           <Col>
             <Text variant='h2'>Primary</Text>
-            <Button fullWidth>Button</Button>
             <Button size='sm'>Button</Button>
             <Button size='md'>Button</Button>
             <Button size='lg'>Button</Button>
+            <Button fullWidth>Button</Button>
           </Col>
 
           <Col>
             <Text variant='h2'>Secondary</Text>
-            <Button fullWidth intent='secondary'>
-              Button
-            </Button>
             <Button size='sm' intent='secondary'>
               Button
             </Button>
@@ -49,13 +45,13 @@ const Home: NextPage = () => {
             <Button size='lg' intent='secondary'>
               Button
             </Button>
+            <Button fullWidth intent='secondary'>
+              Button
+            </Button>
           </Col>
 
           <Col>
             <Text variant='h2'>Primary With Icons</Text>
-            <Button fullWidth icon={FaBell}>
-              Button
-            </Button>
             <Button size='sm' icon={FaBell}>
               Button
             </Button>
@@ -65,52 +61,39 @@ const Home: NextPage = () => {
             <Button size='lg' icon={FaBell}>
               Button
             </Button>
-          </Col>
-
-          <Col>
-            <Text variant='h2'>Secondary With Icons</Text>
-            <Button fullWidth icon={FaBell} intent='secondary'>
-              Button
-            </Button>
-            <Button size='sm' icon={FaBell} intent='secondary'>
-              Button
-            </Button>
-            <Button size='md' icon={FaBell} intent='secondary'>
-              Button
-            </Button>
-            <Button size='lg' icon={FaBell} intent='secondary'>
+            <Button fullWidth icon={FaBell}>
               Button
             </Button>
           </Col>
 
           <Col>
             <Text variant='h2'>Danger</Text>
-            <Button fullWidth icon={FaBell} intent='danger'>
+            <Button size='sm' intent='danger'>
               Button
             </Button>
-            <Button size='sm' icon={FaBell} intent='danger'>
+            <Button size='md' intent='danger'>
               Button
             </Button>
-            <Button size='md' icon={FaBell} intent='danger'>
+            <Button size='lg' intent='danger'>
               Button
             </Button>
-            <Button size='lg' icon={FaBell} intent='danger'>
+            <Button fullWidth intent='danger'>
               Button
             </Button>
           </Col>
 
           <Col>
             <Text variant='h2'>Success</Text>
-            <Button fullWidth icon={FaBell} intent='success'>
+            <Button size='sm' intent='success'>
               Button
             </Button>
-            <Button size='sm' icon={FaBell} intent='success'>
+            <Button size='md' intent='success'>
               Button
             </Button>
-            <Button size='md' icon={FaBell} intent='success'>
+            <Button size='lg' intent='success'>
               Button
             </Button>
-            <Button size='lg' icon={FaBell} intent='success'>
+            <Button fullWidth intent='success'>
               Button
             </Button>
           </Col>

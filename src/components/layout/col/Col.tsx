@@ -7,9 +7,16 @@ const col = cva('flex flex-col items-start', {
       md: 'gap-4',
       lg: 'gap-8',
     },
+    align: {
+      start: "items-start",
+      center: "items-center",
+      stretch: "items-stretch",
+      end: "items-end"
+    }
   },
   defaultVariants: {
     gap: 'md',
+    align: 'start'
   },
 })
 
@@ -19,6 +26,6 @@ export interface ColProps
   children: React.ReactNode
 }
 
-export const Col: React.FC<ColProps> = ({ gap, children, className }) => {
-  return <div className={col({ gap, className })}>{children}</div>
+export const Col: React.FC<ColProps> = ({ gap, align, children, className }) => {
+  return <div className={col({ gap, align, className })}>{children}</div>
 }

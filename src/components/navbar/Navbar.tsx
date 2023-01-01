@@ -1,10 +1,13 @@
-import { Text, Container } from '$components'
+import { Text, Container, Logo, Row } from '$components'
 
 export const NavBar: React.FC = () => {
   return (
-    <nav>
+    <nav className="border-b py-8">
       <Container>
-        <Text variant='h6' element="span">Brand</Text>
+        <Row align="center">
+          <Logo />
+          <Text variant='h5' element="span">Brand</Text>
+        </Row>
       </Container>
     </nav>
   )

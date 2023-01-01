@@ -7,9 +7,16 @@ const row = cva('flex flex-row items-start', {
       md: 'gap-4',
       lg: 'gap-8',
     },
+    align: {
+      start: "items-start",
+      center: "items-center",
+      stretch: "items-stretch",
+      end: "items-end"
+    }
   },
   defaultVariants: {
     gap: 'md',
+    align: 'start'
   },
 })
 
@@ -19,6 +26,6 @@ export interface RowProps
   children: React.ReactNode
 }
 
-export const Row: React.FC<RowProps> = ({ gap, children, className }) => {
-  return <div className={row({ gap, className })}>{children}</div>
+export const Row: React.FC<RowProps> = ({ gap, align, children, className }) => {
+  return <div className={row({ gap, align, className })}>{children}</div>
 }
