@@ -15,19 +15,21 @@ const anchor = cva('underline underline-offset-2 transition', {
 })
 
 export interface AnchorProps
-  extends React.LinkHTMLAttributes<HTMLAnchorElement>,
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "target">,
     VariantProps<typeof anchor> {
   children: React.ReactNode;
+  newTab?: boolean;
 }
 
 export const Anchor: React.FC<AnchorProps> = ({
   className,
   intent,
   href = '/',
+  newTab = false,
   children,
   ...props
 }) => {
   return (
-    <Link href={href} className={anchor({ className, intent })} {...props}>{children}</Link>
+    <Link href={href} className={anchor({ className, intent })} {...props} target={newTab ? "_blank" : "_self"}>{children}</Link>
   )
 }
