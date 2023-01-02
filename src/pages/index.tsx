@@ -8,7 +8,8 @@ import {
   Anchor,
   Card,
   Spacer,
-  Hero
+  Hero,
+  CTA,
 } from '$components'
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
@@ -139,7 +140,7 @@ const Home: NextPage = () => {
 
               <Col>
                 <Text variant='h3'>Secondary</Text>
-                <ButtonLink size='sm' intent='secondary' href="/">
+                <ButtonLink size='sm' intent='secondary' href='/'>
                   Small
                 </ButtonLink>
                 <ButtonLink size='md' intent='secondary'>
@@ -261,6 +262,8 @@ const Home: NextPage = () => {
           </Col>
         </Spacer>
       </Container>
+
+      <CTA />
     </>
   )
 }
