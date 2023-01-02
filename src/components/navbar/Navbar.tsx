@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import { Popover } from '@headlessui/react'
-import { Text, Container, Logo, Row, Anchor, Col, Spacer } from '$components'
-import { NAV_ROUTES, HOME } from '$constants'
+import { Container, Row, Anchor, Col, Spacer, Brand } from '$components'
+import { NAV_ROUTES } from '$constants'
 import { useRouter } from 'next/router'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 
@@ -10,21 +9,15 @@ export const NavBar: React.FC = () => {
 
   return (
     <nav className='border-b'>
-      <Spacer size="sm">
+      <Spacer size='sm'>
         <Container>
           <Row align='center' justify='between' gap='lg'>
-            <Link href={HOME.href}>
-              <Row align='center'>
-                <Logo />
-                <Text variant='h5' element='span'>
-                  Brand
-                </Text>
-              </Row>
-            </Link>
+            <Brand />
 
             <Row gap='lg' className='hidden sm:flex'>
               {NAV_ROUTES.map((route) => (
                 <Anchor
+                  key={route.label}
                   href={route.href}
                   intent={
                     router.pathname === route.href ? 'primary' : 'default'
@@ -35,7 +28,7 @@ export const NavBar: React.FC = () => {
               ))}
             </Row>
 
-            <Popover className='relative sm:hidden'>
+            <Popover className='relative ml-auto sm:hidden'>
               <Popover.Button className='rounded-2xl p-2 transition hover:bg-neutral-100'>
                 <HiBars3BottomRight size={36} />
               </Popover.Button>
@@ -44,6 +37,7 @@ export const NavBar: React.FC = () => {
                 <Col gap='md'>
                   {NAV_ROUTES.map((route) => (
                     <Anchor
+                      key={route.label}
                       href={route.href}
                       intent={
                         router.pathname === route.href ? 'primary' : 'default'

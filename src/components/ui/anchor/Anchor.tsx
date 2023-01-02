@@ -1,7 +1,9 @@
+import React from "react"
 import { cva, type VariantProps } from 'class-variance-authority'
 import Link from 'next/link'
+import type { IconType } from 'react-icons'
 
-const anchor = cva('underline underline-offset-2 transition', {
+const anchor = cva('underline underline-offset-2 transition inline-flex items-center gap-2', {
   variants: {
     intent: {
       primary: 'text-blue-600 decoration-blue-200 hover:decoration-blue-600',
@@ -14,10 +16,11 @@ const anchor = cva('underline underline-offset-2 transition', {
 })
 
 export interface AnchorProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'target'>,
+  extends Omit<React.ComponentPropsWithoutRef<'a'>, 'target'>,
     VariantProps<typeof anchor> {
   children: React.ReactNode
   newTab?: boolean
+  icon?: IconType
 }
 
 export const Anchor: React.FC<AnchorProps> = ({
@@ -26,6 +29,7 @@ export const Anchor: React.FC<AnchorProps> = ({
   href = '/',
   newTab = false,
   children,
+  icon,
   ...props
 }) => {
   return (
@@ -35,6 +39,7 @@ export const Anchor: React.FC<AnchorProps> = ({
       {...props}
       target={newTab ? '_blank' : '_self'}
     >
+      {icon && React.createElement(icon, { className: '' })}
       {children}
     </Link>
   )
