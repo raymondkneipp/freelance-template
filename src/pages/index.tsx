@@ -14,6 +14,7 @@ import {
 import { type NextPage } from 'next'
 import { trpc } from '../utils/trpc'
 import { FaBell } from 'react-icons/fa'
+import { SERVICES } from '$constants'
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: 'from tRPC' })
@@ -24,6 +25,34 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Container className='bg-green-300'>
+        <Text>Default</Text>
+      </Container>
+
+      <Container maxWidth='sm' className='bg-green-300'>
+        <Text>sm</Text>
+      </Container>
+
+      <Container maxWidth='md' className='bg-green-300'>
+        <Text>md</Text>
+      </Container>
+
+      <Container maxWidth='lg' className='bg-green-300'>
+        <Text>lg</Text>
+      </Container>
+
+      <Container maxWidth='xl' className='bg-green-300'>
+        <Text>xl</Text>
+      </Container>
+
+      <Container maxWidth='xxl' className='bg-green-300'>
+        <Text>xxl</Text>
+      </Container>
+
+      <Container maxWidth='none' className='bg-green-300'>
+        <Text>none</Text>
+      </Container>
+
       <Hero />
 
       <Container>
@@ -48,7 +77,9 @@ const Home: NextPage = () => {
                   }}
                 >
                   <Col gap='sm'>
-                    <Text variant='h4' element='h3' clamp={1}>Lorem ipsum dolor sit amet</Text>
+                    <Text variant='h4' element='h3' clamp={1}>
+                      Lorem ipsum dolor sit amet
+                    </Text>
                     <Text clamp={3}>
                       Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                       reprehenderit enim labore culpa sint ad nisi Lorem
@@ -65,7 +96,10 @@ const Home: NextPage = () => {
             </Row>
           </Col>
         </Spacer>
+      </Container>
 
+
+      <Container>
         <Spacer>
           <Col>
             <Text variant='h2'>Card Sizes</Text>
@@ -272,6 +306,61 @@ const Home: NextPage = () => {
           </Col>
         </Spacer>
       </Container>
+
+      <Spacer className='bg-neutral-100'>
+        <Container>
+          <Col align='stretch'>
+            <Text variant='h2' align='center'>
+              Trusted Industry Leading Experts
+            </Text>
+            <Text align='center'>
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </Text>
+            <Row justify='around' gap='lg'>
+              <Col align='center' gap='sm'>
+                <Text
+                  variant='h1'
+                  align='center'
+                  intent='primary'
+                  element='span'
+                >
+                  542
+                </Text>
+                <Text variant='p' align='center' element='h3'>
+                  Happy Customers
+                </Text>
+              </Col>
+              <Col align='center' gap='sm'>
+                <Text
+                  variant='h1'
+                  align='center'
+                  intent='primary'
+                  element='span'
+                >
+                  24/7
+                </Text>
+                <Text variant='p' align='center' element='h3'>
+                  Customer Support
+                </Text>
+              </Col>
+              <Col align='center' gap='sm'>
+                <Text
+                  variant='h1'
+                  align='center'
+                  intent='primary'
+                  element='span'
+                >
+                  100%
+                </Text>
+                <Text variant='p' align='center' element='h3'>
+                  Satisfaction
+                </Text>
+              </Col>
+            </Row>
+          </Col>
+        </Container>
+      </Spacer>
 
       <CTA />
     </>

@@ -2,14 +2,18 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 const container = cva('mx-auto px-8', {
   variants: {
-    size: {
-      sm: 'container max-w-screen-sm',
-      md: 'container',
-      lg: 'w-full',
+    maxWidth: {
+      default: 'container',
+      sm: 'max-w-screen-sm',
+      md: 'max-w-screen-md',
+      lg: 'max-w-screen-lg',
+      xl: 'max-w-screen-xl',
+      xxl: 'max-w-screen-2xl',
+      none: 'max-w-none'
     },
   },
   defaultVariants: {
-    size: 'md',
+    maxWidth: 'default',
   },
 })
 
@@ -21,12 +25,12 @@ export interface ContainerProps
 
 export const Container: React.FC<ContainerProps> = ({
   className,
-  size,
+  maxWidth,
   children,
   ...props
 }) => {
   return (
-    <div className={container({ className, size })} {...props}>
+    <div className={container({ className, maxWidth })} {...props}>
       {children}
     </div>
   )

@@ -7,7 +7,7 @@ export const Brand: React.FC = () => {
     <Link href={HOME.href}>
       <Row align='center'>
         <Logo />
-        <Text variant='h5' element='span'>
+        <Text variant='h5' element='span' className="hidden xs:inline">
           Business Name
         </Text>
       </Row>

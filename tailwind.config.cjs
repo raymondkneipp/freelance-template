@@ -9,6 +9,9 @@ module.exports = {
         sans: ['var(--font-inter)', ...fontFamily.sans],
         heading: ['var(--font-syne)', ...fontFamily.sans],
       },
+      screens: {
+        xs: '475px',
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],

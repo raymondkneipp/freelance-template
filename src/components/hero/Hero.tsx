@@ -11,7 +11,7 @@ import {FaBoxTissue, FaBriefcase} from "react-icons/fa"
 export const Hero: React.FC = () => {
   return (
       <Spacer size='lg' className='bg-red-300'>
-        <Container size='sm'>
+        <Container maxWidth='sm'>
           <Col align='center'>
             <Text variant='h1' align='center'>
               A Great Tagline Goes Here!
