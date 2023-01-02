@@ -1,7 +1,16 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 
-const container = cva('container mx-auto px-8', {
-  variants: {}
+const container = cva('mx-auto px-8', {
+  variants: {
+    size: {
+      sm: 'container max-w-screen-sm',
+      md: 'container',
+      lg: 'w-full',
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+  },
 })
 
 export interface ContainerProps
@@ -10,6 +19,15 @@ export interface ContainerProps
   children: React.ReactNode
 }
 
-export const Container: React.FC<ContainerProps> = ({ className, children, ...props }) => {
-  return <div className={container({className})} {...props}>{children}</div>
+export const Container: React.FC<ContainerProps> = ({
+  className,
+  size,
+  children,
+  ...props
+}) => {
+  return (
+    <div className={container({ className, size })} {...props}>
+      {children}
+    </div>
+  )
 }
