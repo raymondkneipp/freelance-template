@@ -14,7 +14,7 @@ const container = cva('mx-auto px-8', {
 })
 
 export interface ContainerProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends React.ComponentPropsWithoutRef<'div'>,
     VariantProps<typeof container> {
   children: React.ReactNode
 }

@@ -1,24 +1,27 @@
 import React from 'react'
+import Link from 'next/link'
 
 import { CommonButtonProps, button } from './index'
 
-export interface ButtonProps
+export interface ButtonLinkProps
   extends CommonButtonProps,
-    React.ComponentPropsWithoutRef<'button'> {
+    React.ComponentPropsWithoutRef<'a'> {
   children: React.ReactNode
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const ButtonLink: React.FC<ButtonLinkProps> = ({
   className,
   intent,
   size,
   fullWidth,
   icon,
+  href = '/',
   children,
   ...props
 }) => {
   return (
-    <button
+    <Link
+      href={href}
       className={button({ className, intent, size, fullWidth })}
       {...props}
     >
@@ -26,6 +29,6 @@ export const Button: React.FC<ButtonProps> = ({
         {icon && React.createElement(icon, { className: '' })}
         {children}
       </>
-    </button>
+    </Link>
   )
 }
