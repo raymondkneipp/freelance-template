@@ -28,10 +28,18 @@ const Home: NextPage = () => {
 
       <Container>
         <Spacer>
-          <Col>
+          <Col gap='lg'>
             <Text variant='h2'>Cards in Row</Text>
-            <Row>
-              {[...Array(5)].map((_, i) => (
+            <Text>
+              Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+              reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
+              ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
+              Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet
+              voluptate voluptate dolor minim nulla est proident. Nostrud
+              officia pariatur ut officia.
+            </Text>
+            <Row gap='lg'>
+              {[...Array(3)].map((_, i) => (
                 <Card
                   key={i}
                   image={{
@@ -48,7 +56,9 @@ const Home: NextPage = () => {
                       cupidatat luptate laboris sint cupidatat ullamco ut ea
                       consectetur et est culpa et culpa duis.
                     </Text>
-                    <ButtonLink fullWidth>Click Me</ButtonLink>
+                    <Text variant='p' element='span' intent='primary'>
+                      March 5th 2023
+                    </Text>
                   </Col>
                 </Card>
               ))}
