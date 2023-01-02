@@ -48,8 +48,8 @@ const Home: NextPage = () => {
                   }}
                 >
                   <Col gap='sm'>
-                    <Text variant='h3'>Lorem ipsum dolor sit amet</Text>
-                    <Text>
+                    <Text variant='h4' element='h3' clamp={1}>Lorem ipsum dolor sit amet</Text>
+                    <Text clamp={3}>
                       Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                       reprehenderit enim labore culpa sint ad nisi Lorem
                       pariatur mollit ex esse exercitation amet. Nisi anim

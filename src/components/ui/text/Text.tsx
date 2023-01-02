@@ -22,6 +22,14 @@ const text = cva('text-base', {
       center: 'text-center',
       end: 'text-end',
       justify: 'text-justify',
+    },
+    clamp: {
+      1: 'line-clamp-1',
+      2: 'line-clamp-2',
+      3: 'line-clamp-3',
+      4: 'line-clamp-4',
+      5: 'line-clamp-5',
+      6: 'line-clamp-6',
     }
   },
   defaultVariants: {
@@ -44,13 +52,14 @@ export const Text: React.FC<TextProps> = ({
   variant = 'p',
   children,
   align,
+  clamp,
   intent,
   element = variant,
   ...props
 }) => {
   return React.createElement(
     element || 'p',
-    { className: text({ className, intent, variant, align }), ...props },
+    { className: text({ className, intent, clamp, variant, align }), ...props },
     children
   )
 }
