@@ -4,17 +4,17 @@ import { FaPhoneAlt } from 'react-icons/fa'
 
 export const CTA: React.FC = () => {
   return (
-    <Spacer size='md' className='bg-red-300'>
-      <Container size='sm'>
+    <Spacer className='bg-blue-600'>
+      <Container maxWidth='sm'>
         <Col align='center'>
-          <Text variant='h2' align='center'>
+          <Text variant='h2' align='center' intent="light">
             Give Us A Call Today!
           </Text>
-          <Text align='center'>
+          <Text align='center' intent="light">
             Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
             cillum sint consectetur cupidatat.
           </Text>
-          <ButtonLink href={CONTACT.href} size='lg' icon={FaPhoneAlt}>
+          <ButtonLink href={CONTACT.href} size='lg' icon={FaPhoneAlt} intent='light'>
             {CONTACT.label}
           </ButtonLink>
         </Col>

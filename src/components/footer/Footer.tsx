@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <Container>
           <Col align='stretch'>
             <Row justify='between'>
-              <Col gap='sm'>
+              <Col gap='sm' className='max-w-md'>
                 <Brand />
                 <Text>
                   Lorem ipsum dolor sit amet, qui minim labore adipisicing minim

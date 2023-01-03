@@ -14,8 +14,9 @@ const text = cva('text-base', {
       span: 'font-sans',
     },
     intent: {
-      primary: 'text-blue-600',
       default: 'text-black',
+      primary: 'text-blue-600',
+      light: 'text-white',
     },
     align: {
       start: 'text-start',

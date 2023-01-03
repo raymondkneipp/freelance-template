@@ -1,16 +1,8 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 import Image from 'next/image'
 
-const card = cva('', {
+const card = cva('p-8', {
   variants: {
-    size: {
-      sm: 'p-4',
-      md: 'p-8',
-      lg: 'p-12',
-    },
-  },
-  defaultVariants: {
-    size: 'md',
   },
 })
 
@@ -27,7 +19,6 @@ export interface CardProps
 export const Card: React.FC<CardProps> = ({
   image,
   children,
-  size,
   className,
 }) => {
   return (
@@ -41,7 +32,7 @@ export const Card: React.FC<CardProps> = ({
           className='w-full'
         />
       )}
-      <div className={card({ size, className })}>{children}</div>
+      <div className={card({ className })}>{children}</div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ export const NavBar: React.FC = () => {
   const router = useRouter()
 
   return (
-    <nav className='border-b'>
+    <nav className='border-b fixed top-0 right-0 left-0 bg-white'>
       <Spacer size='sm'>
         <Container>
           <Row align='center' justify='between' gap='lg'>

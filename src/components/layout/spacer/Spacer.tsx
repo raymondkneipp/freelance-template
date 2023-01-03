@@ -5,19 +5,19 @@ const spacer = cva('flex items-center', {
   variants: {
     size: {
       sm: 'py-8',
-      md: 'py-12',
-      lg: 'min-h-screen py-24',
+      default: 'py-12',
+      screen: 'min-h-screen py-24',
     }
   },
   defaultVariants: {
-    size: 'md'
+    size: 'default'
   }
 })
 
 export interface SpacerProps
   extends React.ComponentPropsWithoutRef<'section'>,
     VariantProps<typeof spacer> {
-  children: React.ReactElement
+  children: React.ReactNode
 }
 
 export const Spacer: React.FC<SpacerProps> = ({ children, size, className }) => {

@@ -9,18 +9,18 @@ export interface CommonButtonProps extends VariantProps<typeof button> {
 }
 
 export const button = cva(
-  'rounded-xl font-bold uppercase inline-flex items-center hover:brightness-125 transition text-center justify-center',
+  'rounded-xl font-bold inline-flex items-center hover:brightness-125 transition text-center justify-center',
   {
     variants: {
       intent: {
-        primary: 'bg-blue-400',
-        secondary: 'bg-violet-400',
-        danger: 'bg-red-400',
-        success: 'bg-emerald-400',
+        primary: 'bg-blue-600 text-white',
+        secondary: 'bg-violet-600 text-white',
+        danger: 'bg-red-600 text-white',
+        success: 'bg-emerald-600 text-white',
+        light: 'bg-white text-blue-600',
       },
       size: {
-        sm: 'px-4 py-2 gap-2 text-sm',
-        md: 'px-6 py-3 gap-3 text-base',
+        default: 'px-6 py-3 gap-3 text-base',
         lg: 'px-8 py-4 gap-4 text-lg',
       },
       fullWidth: {
@@ -28,7 +28,7 @@ export const button = cva(
       },
     },
     defaultVariants: {
-      size: 'md',
+      size: 'default',
       intent: 'primary',
     },
   }
