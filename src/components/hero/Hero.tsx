@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
             ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
           </Text>
 
-          <Row align='center'>
+          <Row align='center' justify='center'>
             <ButtonLink
               href={CONTACT.href}
               intent='primary'

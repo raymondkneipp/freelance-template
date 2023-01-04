@@ -17,7 +17,7 @@ const Home: NextPage = () => {
               </Text>
             </Col>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-              {[...Array(3)].map((item) => (
+              {[...Array(3)].fill(Math.random()).map((item) => (
                 <Card
                   image={{ src: '/images/code.jpg', alt: 'code' }}
                   key={item}
