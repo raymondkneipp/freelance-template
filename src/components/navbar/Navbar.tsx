@@ -8,7 +8,7 @@ export const NavBar: React.FC = () => {
   const router = useRouter()
 
   return (
-    <nav className='fixed top-0 right-0 left-0 border-b bg-white py-8'>
+    <nav className='fixed top-0 right-0 left-0 border-b bg-white py-8 z-50'>
       <Container className='flex items-center justify-between gap-8'>
         <Brand />
 
