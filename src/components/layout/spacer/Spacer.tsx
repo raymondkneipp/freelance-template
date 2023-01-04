@@ -1,16 +1,16 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 import React from 'react'
 
-const spacer = cva('flex items-center', {
+const spacer = cva('', {
   variants: {
     size: {
       sm: 'py-8',
-      default: 'py-12',
-      screen: 'min-h-screen py-24',
+      md: 'py-12',
+      lg: 'min-h-screen py-24 flex items-center',
     },
   },
   defaultVariants: {
-    size: 'default',
+    size: 'md',
   },
 })
 

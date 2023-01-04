@@ -19,14 +19,21 @@ export const Footer: React.FC = () => {
               <Col gap='sm'>
                 <Text variant='h6'>Pages</Text>
                 {NAV_ROUTES.map((route) => (
-                  <Anchor href={route.href} key={route.label}>{route.label}</Anchor>
+                  <Anchor href={route.href} key={route.label}>
+                    {route.label}
+                  </Anchor>
                 ))}
               </Col>
 
               <Col gap='sm'>
                 <Text variant='h6'>Socials</Text>
                 {SOCIALS.map((social) => (
-                  <Anchor href={social.href} newTab icon={social.icon} key={social.name}>
+                  <Anchor
+                    href={social.href}
+                    newTab
+                    icon={social.icon}
+                    key={social.name}
+                  >
                     {social.name}
                   </Anchor>
                 ))}

@@ -8,23 +8,23 @@ const row = cva('flex flex-row items-start flex-wrap', {
       lg: 'gap-8',
     },
     align: {
-      start: "items-start",
-      center: "items-center",
-      stretch: "items-stretch",
-      end: "items-end"
+      start: 'items-start',
+      center: 'items-center',
+      stretch: 'items-stretch',
+      end: 'items-end',
     },
     justify: {
-      start: "justify-start",
-      center: "justify-center",
-      between: "justify-between",
-      around: "justify-around",
-      evenly: "justify-evenly"
-    }
+      start: 'justify-start',
+      center: 'justify-center',
+      between: 'justify-between',
+      around: 'justify-around',
+      evenly: 'justify-evenly',
+    },
   },
   defaultVariants: {
     gap: 'md',
     align: 'start',
-    justify: 'start'
+    justify: 'start',
   },
 })
 
@@ -34,6 +34,14 @@ export interface RowProps
   children: React.ReactNode
 }
 
-export const Row: React.FC<RowProps> = ({ gap, align, justify, children, className }) => {
-  return <div className={row({ gap, align, justify, className })}>{children}</div>
+export const Row: React.FC<RowProps> = ({
+  gap,
+  align,
+  justify,
+  children,
+  className,
+}) => {
+  return (
+    <div className={row({ gap, align, justify, className })}>{children}</div>
+  )
 }

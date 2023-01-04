@@ -9,7 +9,7 @@ const container = cva('mx-auto px-8', {
       lg: 'max-w-screen-lg',
       xl: 'max-w-screen-xl',
       xxl: 'max-w-screen-2xl',
-      none: 'max-w-none'
+      none: 'max-w-none',
     },
   },
   defaultVariants: {

@@ -4,7 +4,7 @@ import { FaPhoneAlt } from 'react-icons/fa'
 
 export const CTA: React.FC = () => {
   return (
-    <Spacer className='bg-emerald-700'>
+    <Spacer className='bg-primary'>
       <Container maxWidth='sm'>
         <Col align='center'>
           <Text variant='h2' align='center' intent='light'>

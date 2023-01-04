@@ -31,16 +31,15 @@ const text = cva('text-base', {
       4: 'line-clamp-4',
       5: 'line-clamp-5',
       6: 'line-clamp-6',
-    }
+    },
   },
   defaultVariants: {
     variant: 'p',
     align: 'start',
-    intent: 'default'
+    intent: 'default',
   },
 })
 
-// TODO: possible generics HTMLParagraphElement, HTMLHeadingElement, etc.
 export interface TextProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof text> {

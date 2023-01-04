@@ -1,19 +1,22 @@
-import React from "react"
+import React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import Link from 'next/link'
 import type { IconType } from 'react-icons'
 
-const anchor = cva('underline underline-offset-2 transition inline-flex items-center gap-2', {
-  variants: {
-    intent: {
-      primary: 'text-primary decoration-primary/25 hover:decoration-primary',
-      default: 'text-inherit decoration-black/25 hover:decoration-black',
+const anchor = cva(
+  'underline underline-offset-2 transition inline-flex items-center gap-2',
+  {
+    variants: {
+      intent: {
+        primary: 'text-primary decoration-primary/25 hover:decoration-primary',
+        default: 'text-inherit decoration-black/25 hover:decoration-black',
+      },
     },
-  },
-  defaultVariants: {
-    intent: 'default',
-  },
-})
+    defaultVariants: {
+      intent: 'default',
+    },
+  }
+)
 
 export interface AnchorProps
   extends Omit<React.ComponentPropsWithoutRef<'a'>, 'target'>,

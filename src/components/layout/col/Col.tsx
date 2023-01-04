@@ -8,23 +8,23 @@ const col = cva('flex flex-col items-start', {
       lg: 'gap-8',
     },
     align: {
-      start: "items-start",
-      center: "items-center",
-      stretch: "items-stretch",
-      end: "items-end"
+      start: 'items-start',
+      center: 'items-center',
+      stretch: 'items-stretch',
+      end: 'items-end',
     },
     justify: {
-      start: "justify-start",
-      center: "justify-center",
-      between: "justify-between",
-      around: "justify-around",
-      evenly: "justify-evenly"
-    }
+      start: 'justify-start',
+      center: 'justify-center',
+      between: 'justify-between',
+      around: 'justify-around',
+      evenly: 'justify-evenly',
+    },
   },
   defaultVariants: {
     gap: 'md',
     align: 'start',
-    justify: 'start'
+    justify: 'start',
   },
 })
 
@@ -34,6 +34,14 @@ export interface ColProps
   children: React.ReactNode
 }
 
-export const Col: React.FC<ColProps> = ({ gap, align, justify, children, className }) => {
-  return <div className={col({ gap, align, justify, className })}>{children}</div>
+export const Col: React.FC<ColProps> = ({
+  gap,
+  align,
+  justify,
+  children,
+  className,
+}) => {
+  return (
+    <div className={col({ gap, align, justify, className })}>{children}</div>
+  )
 }

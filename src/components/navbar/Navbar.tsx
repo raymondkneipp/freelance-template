@@ -1,5 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
-import { Container, Row, Anchor, Col, Spacer, Brand } from '$components'
+import { Container, Row, Anchor, Col, Brand } from '$components'
 import { NAV_ROUTES } from '$constants'
 import { useRouter } from 'next/router'
 import { HiBars3BottomRight, HiXMark } from 'react-icons/hi2'
@@ -8,36 +8,30 @@ export const NavBar: React.FC = () => {
   const router = useRouter()
 
   return (
-    <nav className='border-b fixed top-0 right-0 left-0 bg-white'>
-      <Spacer size='sm'>
-        <Container>
-          <Row align='center' justify='between' gap='lg'>
-            <Brand />
+    <nav className='fixed top-0 right-0 left-0 border-b bg-white py-8'>
+      <Container className='flex items-center justify-between gap-8'>
+        <Brand />
 
-            <Row gap='lg' className='hidden md:flex'>
-              {NAV_ROUTES.map((route) => (
-                <Anchor
-                  key={route.label}
-                  href={route.href}
-                  intent={
-                    router.pathname === route.href ? 'primary' : 'default'
-                  }
-                >
-                  {route.label}
-                </Anchor>
-              ))}
-            </Row>
+        <Row gap='lg' className='hidden md:flex'>
+          {NAV_ROUTES.map((route) => (
+            <Anchor
+              key={route.label}
+              href={route.href}
+              intent={router.pathname === route.href ? 'primary' : 'default'}
+            >
+              {route.label}
+            </Anchor>
+          ))}
+        </Row>
 
-            <Popover className='relative ml-auto md:hidden'>
-              {({open}) => (
-<>
+        <Popover className='relative ml-auto md:hidden'>
+          {({ open }) => (
+            <>
               <Popover.Button className='h-12 w-12 rounded-2xl p-2 transition hover:bg-neutral-100'>
                 {open ? (
-
-                <HiXMark size='auto' />
+                  <HiXMark size='auto' />
                 ) : (
-
-                <HiBars3BottomRight size='auto' />
+                  <HiBars3BottomRight size='auto' />
                 )}
               </Popover.Button>
               <Transition
@@ -49,7 +43,7 @@ export const NavBar: React.FC = () => {
                 leaveTo='transform scale-95 opacity-0'
               >
                 <Popover.Panel className='absolute right-0 z-10 mt-4 w-48 rounded-2xl border bg-white p-8'>
-                  <Col gap='md' align="stretch">
+                  <Col gap='md' align='stretch'>
                     {NAV_ROUTES.map((route) => (
                       <Anchor
                         key={route.label}
@@ -64,12 +58,10 @@ export const NavBar: React.FC = () => {
                   </Col>
                 </Popover.Panel>
               </Transition>
-              </>
-              )}
-            </Popover>
-          </Row>
-        </Container>
-      </Spacer>
+            </>
+          )}
+        </Popover>
+      </Container>
     </nav>
   )
 }
