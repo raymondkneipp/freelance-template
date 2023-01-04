@@ -1,7 +1,9 @@
+import Image from "next/image"
+
 export const Logo: React.FC = () => {
   return (
     <>
-      <div className='h-12 w-12 bg-blue-600 rounded-2xl'></div>
+      <Image src="/images/logo.svg" alt="logo" width={60} height={60} className='w-12 h-12' />
     </>
   )
 }

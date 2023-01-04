@@ -3,7 +3,7 @@ import { FaBoxTissue, FaBriefcase } from 'react-icons/fa'
 
 export const Hero: React.FC = () => {
   return (
-    <Spacer size='screen' className='bg-neutral-600 mb-12'>
+    <Spacer size='screen' className='bg-neutral-700'>
       <Container maxWidth="md" className='mt-28'>
         <Col align="center">
           <Text variant='h1' intent='light' align="center">

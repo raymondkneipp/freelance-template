@@ -13,11 +13,11 @@ export const button = cva(
   {
     variants: {
       intent: {
-        primary: 'bg-blue-600 text-white',
-        secondary: 'bg-violet-600 text-white',
+        primary: 'bg-primary text-white',
+        secondary: 'bg-secondary text-white',
         danger: 'bg-red-600 text-white',
         success: 'bg-emerald-600 text-white',
-        light: 'bg-white text-blue-600',
+        light: 'bg-white text-primary',
       },
       size: {
         default: 'px-6 py-3 gap-3 text-base',

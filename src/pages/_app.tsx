@@ -3,6 +3,7 @@ import { trpc } from '../utils/trpc'
 import '../styles/globals.css'
 import { Inter, Syne } from '@next/font/google'
 import { NavBar, Footer } from '$components'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const syne = Syne({
@@ -13,15 +14,19 @@ const syne = Syne({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div
-      className={`${inter.variable} ${syne.variable} font-sans`}
-    >
-      <NavBar />
-      <main>
-        <Component {...pageProps} />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <link rel='icon' type='image/png' href='/favicon.png' />
+      </Head>
+      <div className={`${inter.variable} ${syne.variable} font-sans`}>
+        <NavBar />
+        <main>
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
 

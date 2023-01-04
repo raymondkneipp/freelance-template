@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority'
-import React from "react"
+import React from 'react'
 
 const spacer = cva('flex items-center', {
   variants: {
@@ -7,11 +7,11 @@ const spacer = cva('flex items-center', {
       sm: 'py-8',
       default: 'py-12',
       screen: 'min-h-screen py-24',
-    }
+    },
   },
   defaultVariants: {
-    size: 'default'
-  }
+    size: 'default',
+  },
 })
 
 export interface SpacerProps
@@ -20,10 +20,10 @@ export interface SpacerProps
   children: React.ReactNode
 }
 
-export const Spacer: React.FC<SpacerProps> = ({ children, size, className }) => {
-  return (
-    <section className={spacer({ className, size })}>
-      {children}
-    </section>
-  )
+export const Spacer: React.FC<SpacerProps> = ({
+  children,
+  size,
+  className,
+}) => {
+  return <section className={spacer({ className, size })}>{children}</section>
 }

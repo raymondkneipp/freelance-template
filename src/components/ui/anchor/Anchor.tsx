@@ -6,8 +6,8 @@ import type { IconType } from 'react-icons'
 const anchor = cva('underline underline-offset-2 transition inline-flex items-center gap-2', {
   variants: {
     intent: {
-      primary: 'text-blue-600 decoration-blue-200 hover:decoration-blue-600',
-      default: 'text-inherit decoration-neutral-200 hover:decoration-black',
+      primary: 'text-primary decoration-primary/25 hover:decoration-primary',
+      default: 'text-inherit decoration-black/25 hover:decoration-black',
     },
   },
   defaultVariants: {

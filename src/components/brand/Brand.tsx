@@ -1,16 +1,14 @@
 import Link from 'next/link'
-import { Text, Logo, Row } from '$components'
+import { Text, Logo } from '$components'
 import { HOME } from '$constants'
 
 export const Brand: React.FC = () => {
   return (
-    <Link href={HOME.href}>
-      <Row align='center'>
-        <Logo />
-        <Text variant='h5' element='span' className="hidden xs:inline">
-          Business Name
-        </Text>
-      </Row>
+    <Link href={HOME.href} className='flex items-center gap-4'>
+      <Logo />
+      <Text variant='h5' element='span' className='hidden xs:inline'>
+        Brand
+      </Text>
     </Link>
   )
 }
