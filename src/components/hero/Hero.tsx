@@ -1,4 +1,4 @@
-import { Container, Text, ButtonLink, Col, Row, Spacer } from '$components'
+import { Container, Divider, Text, ButtonLink, Col, Row, Spacer } from '$components'
 import { CONTACT, SERVICES } from '$constants'
 import { HiCog, HiPhone } from 'react-icons/hi2'
 
@@ -38,6 +38,8 @@ export const Hero: React.FC = () => {
           </Col>
         </Container>
       </Spacer>
+
+      <Divider shape='tilt' bg='text-neutral-700' />
     </>
   )
 }

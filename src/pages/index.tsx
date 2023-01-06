@@ -6,7 +6,7 @@ import {
   Hero,
   CTA,
   Card,
-  Divider,
+  Input
 } from '$components'
 import { type NextPage } from 'next'
 
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <>
       <Hero />
 
-      <Divider shape='tilt' bg='text-neutral-700' />
+      <Input />
 
       <Container>
         <Spacer>
