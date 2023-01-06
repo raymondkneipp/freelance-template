@@ -6,7 +6,8 @@ const spacer = cva('', {
     size: {
       sm: 'py-8',
       md: 'py-12',
-      lg: 'min-h-screen py-24 flex items-center',
+      lg: 'py-24',
+      screen: 'min-h-screen py-24 flex items-center',
     },
   },
   defaultVariants: {

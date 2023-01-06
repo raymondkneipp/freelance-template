@@ -1,10 +1,21 @@
-import { Container, Text, Col, Spacer, Hero, CTA, Card } from '$components'
+import {
+  Container,
+  Text,
+  Col,
+  Spacer,
+  Hero,
+  CTA,
+  Card,
+  Divider,
+} from '$components'
 import { type NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
     <>
       <Hero />
+
+      <Divider shape='tilt' bg='text-neutral-700' />
 
       <Container>
         <Spacer>
@@ -16,11 +27,11 @@ const Home: NextPage = () => {
                 sint cillum sint consectetur cupidatat.
               </Text>
             </Col>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-              {[...Array(3)].fill(Math.random()).map((item) => (
+            <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
+              {[...Array(3)].map((_, i) => (
                 <Card
                   image={{ src: '/images/code.jpg', alt: 'code' }}
-                  key={item}
+                  key={i}
                 >
                   <Col gap='sm'>
                     <Text variant='h3'>
