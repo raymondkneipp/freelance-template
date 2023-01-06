@@ -6,16 +6,14 @@ import {
   Hero,
   CTA,
   Card,
-  Input
+  Page,
 } from '$components'
 import { type NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Page>
       <Hero />
-
-      <Input />
 
       <Container>
         <Spacer>
@@ -29,10 +27,7 @@ const Home: NextPage = () => {
             </Col>
             <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
               {[...Array(3)].map((_, i) => (
-                <Card
-                  image={{ src: '/images/code.jpg', alt: 'code' }}
-                  key={i}
-                >
+                <Card image={{ src: '/images/code.jpg', alt: 'code' }} key={i}>
                   <Col gap='sm'>
                     <Text variant='h3'>
                       Lorem ipsum dolor sit amet, qui minim labore adipisicing
@@ -85,33 +80,8 @@ const Home: NextPage = () => {
         </Spacer>
       </Container>
 
-      <Container>
-        <Spacer>
-          <Col gap='sm'>
-            <Text variant='h2'>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </Text>
-            <Text>
-              Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-              reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-              ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-              Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet
-              voluptate voluptate dolor minim nulla est proident. Nostrud
-              officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-              occaecat reprehenderit commodo officia dolor Lorem duis laboris
-              cupidatat officia voluptate. Culpa proident adipisicing id nulla
-              nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua
-              reprehenderit commodo ex non excepteur duis sunt velit enim.
-              Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
-              culpa et culpa duis.
-            </Text>
-          </Col>
-        </Spacer>
-      </Container>
-
       <CTA />
-    </>
+    </Page>
   )
 }
 

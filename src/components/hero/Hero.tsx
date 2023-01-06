@@ -6,7 +6,7 @@ export const Hero: React.FC = () => {
   return (
     <>
       <Spacer size='screen' className='bg-neutral-700'>
-        <Container maxWidth='md' className='mt-28'>
+        <Container maxWidth='md'>
           <Col align='center'>
             <Text variant='h1' intent='light' align='center'>
               A Great Tagline Goes Here!
