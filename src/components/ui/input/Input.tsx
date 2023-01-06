@@ -15,7 +15,7 @@ export const Input: React.FC<Props> = ({
       <input
         type={type}
         id={id}
-        className='w-full rounded-2xl border py-3 px-6'
+        className='w-full border py-3 px-6'
         {...props}
       />
     </Col>

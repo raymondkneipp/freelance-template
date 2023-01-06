@@ -9,7 +9,7 @@ export interface CommonButtonProps extends VariantProps<typeof button> {
 }
 
 export const button = cva(
-  'rounded-xl font-bold inline-flex items-center hover:brightness-125 transition text-center justify-center',
+  'font-bold inline-flex items-center hover:brightness-125 transition text-center justify-center',
   {
     variants: {
       intent: {

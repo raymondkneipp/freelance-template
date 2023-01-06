@@ -17,7 +17,7 @@ export interface CardProps
 
 export const Card: React.FC<CardProps> = ({ image, children, className }) => {
   return (
-    <div className='overflow-hidden rounded-2xl border'>
+    <div className='overflow-hidden border'>
       {image && (
         <Image
           src={image.src}
