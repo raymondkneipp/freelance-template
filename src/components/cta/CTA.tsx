@@ -6,7 +6,7 @@ export const CTA: React.FC = () => {
   return (
     <>
       <Divider shape='tilt' bg='text-primary' flipVertical flipHorizontal />
-      <Spacer className='relative bg-primary'>
+      <Spacer className='relative bg-primary' size='sm'>
         <Container maxWidth='sm'>
           <Col align='center'>
             <Text variant='h2' align='center' intent='light'>

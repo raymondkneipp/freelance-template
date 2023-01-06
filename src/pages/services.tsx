@@ -5,7 +5,7 @@ const Services: NextPage = () => {
   return (
     <Page>
       <Container>
-        <Spacer>
+        <Spacer size='lg'>
           <Col gap='sm'>
             <Text variant='h1'>Services</Text>
             <Text>

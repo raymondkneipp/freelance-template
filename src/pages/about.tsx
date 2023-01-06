@@ -5,7 +5,7 @@ const About: NextPage = () => {
   return (
     <Page>
       <Container>
-        <Spacer>
+        <Spacer size='lg'>
           <Col gap='sm'>
             <Text variant='h1'>About Us</Text>
             <Text>

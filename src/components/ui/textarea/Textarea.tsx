@@ -1,12 +1,11 @@
 import { Col, Label } from '$components'
 import { useId } from 'react'
 
-interface Props extends Omit<React.ComponentPropsWithoutRef<'input'>, 'id'> {
+interface Props extends Omit<React.ComponentPropsWithoutRef<'textarea'>, 'id'> {
   label: string
 }
 
-export const Input: React.FC<Props> = ({
-  type = 'text',
+export const Textarea: React.FC<Props> = ({
   label,
   ...props
 }) => {
@@ -15,12 +14,11 @@ export const Input: React.FC<Props> = ({
   return (
     <Col gap='sm'>
       <Label htmlFor={id}>{label}</Label>
-      <input
-        type={type}
+      <textarea
         id={id}
         className='w-full border py-3 px-6'
         {...props}
-      />
+      ></textarea>
     </Col>
   )
 }
