@@ -36,6 +36,7 @@ export const NavBar: React.FC = () => {
       variants={variants}
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
+      onFocus={() => setHidden(false)}
     >
       <Container className='flex items-center justify-between gap-8'>
         <Brand />
