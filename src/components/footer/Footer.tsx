@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
     <footer className='border-t'>
       <Spacer size='sm'>
         <Container>
-          <Col align='stretch'>
+          <Col gap='lg' align='stretch'>
             <Row justify='between'>
               <Col className='max-w-md'>
                 <Brand />
