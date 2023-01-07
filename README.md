@@ -1,3 +1,0 @@
-# TODO
-
-- Section spacing component
