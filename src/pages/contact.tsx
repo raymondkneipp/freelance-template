@@ -7,6 +7,7 @@ import {
   Anchor,
   Input,
   Textarea,
+  Button,
 } from '$components'
 import { ADDRESS, EMAIL, GEO, TELEPHONE } from '$constants'
 import { type NextPage } from 'next'
@@ -50,6 +51,7 @@ const Contact: NextPage = () => {
               <Input label='Full Name' />
               <Input label='Email' type='email' />
               <Textarea label='Message' rows={3} />
+              <Button onClick={() => alert('submit')}>Send</Button>
             </Col>
           </form>
         </Spacer>
